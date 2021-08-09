@@ -1,0 +1,146 @@
+/* linkit template FROM ULTRASDZCODER */
+
+:root {
+    --soft-color: #3f3d56;
+    --aniamtion-set: 3s ease-out;
+}
+
+a.nav-link:hover, .btn-soft:hover {
+    color: var(--bs-primary)!important;
+}
+
+section {
+    margin: 1em auto;
+}
+
+.spacer-height {
+    height: 3em!important;
+}
+
+.btn-soft {
+    background-color: #E6E6E6;
+    color: var(--soft-color)!important;
+}
+
+#features .card {
+    height: 250px;
+    overflow: hidden;
+}
+
+#about .lists {
+    font-size: 1.25rem;
+    color: var(--bs-success);
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.lists li::before {
+    content: "✔";
+}
+
+.img-control {
+    transform: rotateX(355deg) rotateY(74deg) rotateZ(3deg) rotateY(326deg)translate3d(0, 0, 20px) !important;
+}
+
+#shape {
+    background-color: #e6e6e6;
+    padding: 3em;
+    position: relative;
+}
+
+#shape::before {
+    position: absolute;
+    top: -38%;
+    right: 0%;
+    content: "";
+    clip-path: polygon(100% 10%, 100% 100%, 0 100%, 0 23%);
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 187px;
+}
+
+.social li a.fab {
+    text-decoration: none !important;
+    color: gray;
+}
+
+.up-animation:hover {
+    transform: translateY(-5px);
+    transition: transform .5s ease;
+}
+
+.toleft {
+    animation: toleftAnimation var(--aniamtion-set);
+}
+
+.toright {
+    animation: torightAnimation var(--aniamtion-set);
+}
+
+.toup {
+    animation: toupAnimation var(--aniamtion-set);
+}
+
+.todown {
+    animation: todownAnimation var(--aniamtion-set);
+}
+
+/* animation */
+
+
+@keyframes toleftAnimation {
+    from {
+        opacity: .25;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes torightAnimation {
+    from {
+        opacity: .25;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes toupAnimation {
+    from {
+        opacity: .25;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes todownAnimation {
+    from {
+        opacity: .25;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* animation */
+
+
+/* Responsive */
+@media screen and (max-width:760px) {
+    #shape::before {
+        top: -20%;
+    }
+}
+/* Responsive */
